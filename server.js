@@ -81,8 +81,11 @@ app.post("/edit", async (req, res) => {
   }
 });
 
-app.listen(10001, "0.0.0.0", () => {
-  console.log("🚀 Backend rodando na porta 10001");
+const PORT = process.env.PORT || 10000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Backend rodando na porta ${PORT}`);
 });
+
 
 
